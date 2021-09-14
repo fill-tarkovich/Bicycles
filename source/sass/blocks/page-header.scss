@@ -1,0 +1,58 @@
+.page-header {
+    background-color: $black;
+    background-image: url("../img/bike@2x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+
+    @media (min-resolution: 2dppx) {
+        background-image: url("../img/bike@2x.jpg");
+    }
+
+    @media (max-width: 1023px) {
+        background: none;
+    }
+}
+
+.page-header__wrapper {
+    position: relative;
+    max-width: 880px;
+    margin: 0 auto;
+
+    @media (max-width: 1023px) {
+        max-width: 100%;
+    }
+}
+
+.page-header__logo {
+    position: absolute;
+    top: 318px;
+
+    @media (max-width: 1023px) {
+        top: 25px;
+        padding-left: 16px;
+    }
+}
+
+.page-header__promo {
+    width: 400px;
+    padding-top: 307px;
+    margin-bottom: 240px;
+    color: $white;
+}
+
+.page-header__promo-heading {
+    margin: 0;
+    margin-bottom: 24px;
+    font-weight: bold;
+    font-size: 46px;
+    line-height: 64px;
+}
+
+.page-header__promo-text {
+    margin: 0;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 32px;
+    opacity: 0.8;
+}

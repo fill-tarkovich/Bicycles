@@ -1,0 +1,41 @@
+.main-nav {
+    position: relative;
+}
+
+.main-nav__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0;
+    margin: 0;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.2);
+  
+      @media (max-width: 1023px) {
+        display: none;
+      }
+    }
+}
+
+.main-nav__list-item {
+    padding: 21px 25px 9px 20px;
+    font-weight: 300;
+    margin-right: 89px;
+  
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+}
+
+.main-nav__link {
+    color: $white;
+    opacity: 0.7;
+}
