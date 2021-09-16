@@ -47,8 +47,8 @@
       <section class="form">
         <h2>Заполните поля ниже и мы подберем велосипед Вашей мечты</h2>
         <form action="https://echo.htmlacademy.ru" method="post">
-          <input type="text" placeholder="Введите Ваше Имя" required="">
-          <input type="text" placeholder="Введите Ваш номер телефона" required="">
+          <input type="text" name="name" id="name" placeholder="Введите Ваше Имя" required="">
+          <input type="text" name="phone" id="phone" placeholder="Введите Ваш номер телефона" pattern="[0-9]{11}" required="">
           <button class="form__button">Подобрать велосипед мечты</button>
         </form>
       </section>
