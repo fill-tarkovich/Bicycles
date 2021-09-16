@@ -4,9 +4,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: 1023px) {
+        background-image: linear-gradient(to bottom, #131314 83%, transparent 17%);
+    }
+
+    @media (max-width: 767px) {
+        background-image: linear-gradient(to bottom, #131314 89%, transparent 11%);
+    }
 }
 
-.video__heading {
+.video h2 {
     max-width: 350px;
     margin: 0 auto 20px;
     padding-top: 120px;
@@ -14,9 +22,18 @@
     font-size: 30px;
     line-height: 30px;
     letter-spacing: -0.005em;
+
+    @media (max-width: 1023px) {
+        padding-top: 70px;
+        font-size: 24px;
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 84px;
+    }
 }
 
-.video__text {
+.video p {
     max-width: 340px;
     margin: 0 auto;
     margin-bottom: 56px;
@@ -24,10 +41,38 @@
     font-size: 16px;
     line-height: 28px;
     opacity: 0.7;
+    letter-spacing: -0.005em;
+    text-align: center;
+
+    @media (max-width: 1023px) {
+        max-width: 430px;
+        margin-bottom: 40px;
+    }
+
+    @media (max-width: 767px) {
+        margin-bottom: 54px;
+        padding: 0 10px;
+    }
 }
 
 .video__frame {
     position: relative;
+    width: 929px;
+    height: 522px;
+    background-image: url("../img/video.jpg");
+
+    @media (max-width: 1023px) {
+        width: 503px;
+        height: 282px;
+        background-image: url("../img/video_tablet.jpg");
+
+    }
+
+    @media (max-width: 767px) {
+        width: 288px;
+        height: 161.66px;
+        background-image: url("../img/video_mobile.jpg");
+    }
 }
 
 .video__button {
@@ -42,6 +87,16 @@
     border: none;
     cursor: pointer;
 
+    @media (max-width: 1023px) {
+        width: 90px;
+        height: 90px;
+    }
+
+    @media (max-width: 767px) {
+        width: 65px;
+        height: 65px;
+    }
+
     &::before {
         position: absolute;
         content: "";
@@ -53,5 +108,15 @@
         background-image: url("../img/play_icon.svg");
         background-repeat: no-repeat;
         background-position: 50% 50%;
+
+        @media (max-width: 1023px) {
+            width: 19px;
+            height: 26px;
+        }
+
+        @media (max-width: 767px) {
+            width: 13px;
+            height: 18px;
+        }
     }
 }

@@ -4,23 +4,43 @@
     right: 0;
     top: 322px;
     margin-right: 0;
+
+    @media (max-width: 1023px) {
+        position: static;
+        width: 321px;
+        margin: 70px auto;
+    }
+
+    @media (max-width: 767px) {
+        width: 288px;
+    }
 }
 
-.form__text {
+.form h2 {
     margin: 0 0 20px;
     font-weight: 600;
     font-size: 17px;
     line-height: 28px;
     color: $white;
     text-align: center;
+
+    @media (max-width: 1023px) {
+        font-size: 18px;
+        color: $black;
+        margin: 0 -2px 30px;
+    }
+
+    @media (max-width: 767px) {
+        margin-bottom: 20px;
+    }
 }
 
-.form__sections {
+.form form {
     display: flex;
     flex-direction: column;
 }
 
-.form__input {
+.form input {
     padding-top: 13px;
     padding-bottom: 9px;
     padding-left: 30px;

@@ -1,6 +1,6 @@
 .page-header {
     background-color: $black;
-    background-image: url("../img/bike@2x.jpg");
+    background-image: url("../img/bike.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
@@ -30,7 +30,11 @@
 
     @media (max-width: 1023px) {
         top: 25px;
-        padding-left: 16px;
+        padding-left: 21px;
+    }
+
+    @media (max-width: 767px) {
+        padding-left: 17px;
     }
 }
 
@@ -39,20 +43,78 @@
     padding-top: 307px;
     margin-bottom: 240px;
     color: $white;
+
+    @media (max-width: 1023px) {
+        width: 100%;
+        height: 340px;
+        padding: 0;
+        margin-bottom: 70px;
+        font-size: 18px;
+        text-align: center;
+        background-image: url("../img/bike_tablet.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @media (min-resolution: 2dppx) {
+            background-image: url("../img/bike_tablet@2x.jpg");
+        }
+    }
+
+    @media (max-width: 767px) {
+        width: 100%;
+        height: 390px;
+        margin-bottom: 70px;
+        box-sizing: border-box;
+        background-image: url("../img/bike_mobile.jpg");
+        background-size: cover;
+        background-position: center;
+
+        @media (min-resolution: 2dppx) {
+            background-image: url("../img/bike_mobile@2x.jpg");
+        }
+    }
 }
 
-.page-header__promo-heading {
+.page-header__promo h2 {
     margin: 0;
-    margin-bottom: 24px;
+    padding-bottom: 24px;
     font-weight: bold;
     font-size: 46px;
     line-height: 64px;
+
+    @media (max-width: 1023px) {
+
+        padding: 134px 121px 20px;
+        font-size: 30px;
+        line-height: 42px;
+        text-align: center;
+    }
+
+    @media (max-width: 767px) {
+        width: 288px;
+        margin: 0 auto;
+        padding: 120px 0 20px 0;
+    }
 }
 
-.page-header__promo-text {
+.page-header__promo p {
     margin: 0;
     font-weight: 300;
     font-size: 20px;
     line-height: 32px;
     opacity: 0.8;
+
+    @media (max-width: 1023px) {
+        width: 435px;
+        padding: 0;
+        margin: 0 auto 80px auto;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    @media (max-width: 767px) {
+        width: 288px;
+        margin: 0 auto 70px;
+        box-sizing: border-box;
+    }
 }

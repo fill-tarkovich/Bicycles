@@ -1,4 +1,4 @@
-.facts__heading {
+.facts h2 {
     margin: 0;
     margin-bottom: 50px;
     padding-top: 150px;
@@ -7,9 +7,16 @@
     line-height: 30px;
     color: $basic_black;
     text-align: center;
+
+    @media (max-width: 1023px) {
+        margin-bottom: 30px;
+        padding-top: 0;
+        font-size: 24px;
+        line-height: 41px;
+    }
 }
 
-.facts__list {
+.facts ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -19,9 +26,18 @@
     padding-bottom: 98px;
     counter-reset: list-counter;
     list-style: none;
+
+    @media (max-width: 1023px) {
+        max-width: 590px;
+        padding-bottom: 32px;
+    }
+
+    @media (max-width: 767px) {
+        padding-bottom: 43px;
+    }
 }
 
-.facts__item {
+.facts li {
     position: relative;
     width: 263px;
     counter-increment: list-counter;
@@ -30,6 +46,15 @@
     line-height: 34px;
     text-align: center;
     letter-spacing: -0.5px;
+
+    @media (max-width: 1023px) {
+        padding: 54px 15px 42px;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 18px;
+        padding-bottom: 36px;
+    }
 
     &::before {
         position: absolute;
@@ -46,5 +71,9 @@
         line-height: 38px;
         text-align: center;
         color: $aqua;
+
+        @media (max-width: 767px) {
+            top: 4px;
+        }
     }
 }

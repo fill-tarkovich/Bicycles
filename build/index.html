@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>MOON</title>
+  <link rel="preload" href="fonts/opensans-light.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensans-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensans-semibold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensans-bold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -13,41 +17,38 @@
   <h1 class="visually-hidden">Магазин велосипедов MOON</h1>
   <header class="page-header">
     <div class="page-header__wrapper">
-      <svg class="page-header__logo" width="68" height="21" viewBox="0 0 68 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M13.3636 0V20.0455H10.0705V5.82273L8.97273 7.20682L6.825 9.975L6.72954 10.0705L6.58636 9.975L4.43864 7.20682L3.34091 5.775V20.0455H0V0H3.34091L6.72954 4.29545L10.0705 0H13.3636Z" fill="#0AD9C6"></path>
-        <path d="M8.30444 10.0704L8.20898 9.97498L8.30444 10.0704Z" fill="#0AD9C6"></path>
-        <path d="M8.44787 9.97498L8.35241 10.0704H8.30469L8.44787 9.97498Z" fill="#0AD9C6"></path>
-        <path d="M38.2092 5.61453L29.0823 12.316L31.1955 15.194L40.3224 8.49252L38.2092 5.61453Z" fill="#0AD9C6"></path>
-        <path d="M26.6674 3C22.8035 3 19.6243 6.13028 19.6243 10.0431C19.6243 13.9071 22.7546 17.0863 26.6674 17.0863C30.5313 17.0863 33.7105 13.956 33.7105 10.0431C33.7105 6.17919 30.5313 3 26.6674 3ZM26.6674 13.2712C24.8577 13.2712 23.4393 11.8039 23.4393 10.0431C23.4393 8.23344 24.9066 6.81503 26.6674 6.81503C28.4282 6.81503 29.8955 8.28235 29.8955 10.0431C29.8955 11.8039 28.4282 13.2712 26.6674 13.2712Z" fill="#0AD9C6"></path>
-        <path d="M43.6396 3C39.7756 3 36.5964 6.13028 36.5964 10.0431C36.5964 13.9071 39.7267 17.0863 43.6396 17.0863C47.5035 17.0863 50.6827 13.956 50.6827 10.0431C50.6338 6.17919 47.5035 3 43.6396 3ZM43.6396 13.2712C41.8299 13.2712 40.4115 11.8039 40.4115 10.0431C40.4115 8.23344 41.8788 6.81503 43.6396 6.81503C45.4004 6.81503 46.8677 8.28235 46.8677 10.0431C46.8677 11.8039 45.4004 13.2712 43.6396 13.2712Z" fill="#0AD9C6"></path>
-        <path d="M67.5977 0.238647V20.2841H64.2568V9.87956L61.4409 7.20683L59.3409 5.15456V20.2841H56V0.238647H59.2932H59.3409L63.2545 4.0091L64.2568 4.96365V0.238647H67.5977Z" fill="#0AD9C6"></path>
-        <rect x="37" y="3" width="6" height="4" fill="#0AD9C6"></rect>
+      <svg class="page-header__logo" width="68" height="21" viewBox="0 0 68 21" fill="none">
+        <use xlink:href="img/sprite.svg#logo"></use>
       </svg>
-      <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__list-item">
-            <a class="main-nav__link" href="#facts">О нас</a>
-          </li>
-          <li class="main-nav__list-item">
-            <a class="main-nav__link" href="#bicycles">Виды велосипедов</a>
-          </li>
-          <li class="main-nav__list-item">
-            <a class="main-nav__link" href="#video">Видео про велосипеды</a>
-          </li>
-          <li class="main-nav__list-item">
-            <a class="main-nav__link" href="#contacts">Контакты</a>
-          </li>
-        </ul>
+      
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__button" type="button"></button>
+        <div class="main-nav__wrapper">
+          <ul>
+            <li>
+              <a href="#about">О нас</a>
+            </li>
+            <li>
+              <a href="#bicycles">Виды велосипедов</a>
+            </li>
+            <li>
+              <a href="#video">Видео про велосипеды</a>
+            </li>
+            <li>
+              <a href="#contacts">Контакты</a>
+            </li>
+          </ul>
+        </div>
       </nav>
       <div class="page-header__promo">
-        <h2 class="page-header__promo-heading">Мы продаем велосипеды</h2>
-        <p class="page-header__promo-text">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+        <h2>Мы продаем велосипеды</h2>
+        <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
       </div>
       <section class="form">
-        <p class="form__text">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
-        <form class="form__sections" action="https://echo.htmlacademy.ru" method="post">
-          <input class="form__input" type="text" placeholder="Введите Ваше Имя" required="">
-          <input class="form__input" type="text" placeholder="Введите Ваш номер телефона" required="">
+        <h2>Заполните поля ниже и мы подберем велосипед Вашей мечты</h2>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <input type="text" placeholder="Введите Ваше Имя" required="">
+          <input type="text" placeholder="Введите Ваш номер телефона" required="">
           <button class="form__button">Подобрать велосипед мечты</button>
         </form>
       </section>
@@ -55,18 +56,18 @@
   </header>
   <main>
     <section class="facts" id="facts">
-      <h2 class="facts__heading">Несколько фактов о нас</h2>
-      <ul class="facts__list">
-        <li class="facts__item">Самый широкий выбор велосипедов!</li>
-        <li class="facts__item">Доставка велосипедов по всей России!</li>
-        <li class="facts__item">Большой выбор крутых аксессуаров!</li>
-        <li class="facts__item">Профессиональные консультации!</li>
+      <h2>Несколько фактов о нас</h2>
+      <ul>
+        <li>Самый широкий выбор велосипедов!</li>
+        <li>Доставка велосипедов по всей России!</li>
+        <li>Большой выбор крутых аксессуаров!</li>
+        <li>Профессиональные консультации!</li>
       </ul>
     </section>
     <section class="bicycles" id="bicycles">
-      <h2 class="bicycles__heading">Виды велосипедов</h2>
+      <h2>Виды велосипедов</h2>
       <div class="bicycles__wrapper">
-        <ul class="bicycles__list">
+        <ul>
           <li class="bicycles__item bicycles__item--road">
             <picture>
               <source type="image/webp" srcset="img/road_bike.webp, img/road_bike@2x.webp 2x">
@@ -87,7 +88,7 @@
             <picture>
               <source type="image/webp" srcset="img/kids_bike.webp, img/kids_bike@2x.webp 2x">
               <!-- 1х: 342px/512.59px; 2x: 684px/1025.18px -->
-              <img src="img/kids_bike.jpg" srcset="img/kids_bike.jpg 1x, img/kids_bike@2x.jpg 2x" width="342" height="512.59" alt="Фото детского велосипеда">
+              <img src="img/kids_bike.jpg" srcset="img/kids_bike.jpg 1x, img/kids_bike@2x.jpg 2x" width="342" height="513" alt="Фото детского велосипеда">
             </picture>
             <p>Детский велосипед</p>
           </li>
@@ -95,39 +96,35 @@
       </div>
     </section>
     <section class="video" id="video">
-      <h2 class="video__heading">Видео про велосипеды</h2>
-      <p class="video__text">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя</p>
+      <h2>Видео про велосипеды</h2>
+      <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя</p>
       <div class="video__frame">
-        <picture>
-          <source type="image/webp" srcset="img/video.webp, img/video@2x.webp 2x">
-          <!-- 1х: 929px/522px; 2x: 1858px/1044px -->
-          <img src="img/video.jpg" srcset="img/video.jpg 1x, img/video@2x.jpg 2x" width="929" height="522" alt="Видео про велосипеды">
-        </picture>
         <button class="video__button"></button>
       </div>
     </section>
   </main>
   <footer class="page-footer" id="contacts">
-    <h2 class="page-footer__heading">Как нас найти?</h2>
-    <p class="page-footer__text">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+    <h2>Как нас найти?</h2>
+    <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
     <div class="page-footer__map">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sfi!4v1631651057935!5m2!1sru!2sfi" width="957" height="530" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
     <div class="page-footer__contacts">
-      <a class="page-footer__link" href="mailto:gmail@puteshestviemechta.ru">
-        <svg class="page-footer__svg" width="26" height="20" fill="none">
+      <a href="mailto:gmail@puteshestviemechta.ru">
+        <svg width="26" height="20" fill="none">
           <use xlink:href="img/sprite.svg#mail"></use>
         </svg>
         puteshestviemechta@gmail.ru
       </a>
-      <a class="page-footer__link" href="tel:+749978468446">
-        <svg class="page-footer__svg" width="22" height="24" fill="none">
+      <a href="tel:+749978468446">
+        <svg width="22" height="24" fill="none">
           <use xlink:href="img/sprite.svg#phone"></use>
         </svg>
         +7 (499) -784-684-46
       </a>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
