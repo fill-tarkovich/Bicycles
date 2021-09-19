@@ -11,3 +11,8 @@
 a {
   text-decoration: none;
 }
+
+.no-scroll {
+  height: 100vh;
+  overflow: hidden;
+}

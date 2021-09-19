@@ -4,6 +4,7 @@ var navigation = document.querySelector('.main-nav');
 var navButton = document.querySelector('.main-nav__button');
 var navItem = document.querySelectorAll('.main-nav__item');
 
+
 if (navigation) {
   navigation.classList.remove('main-nav--nojs');
 }
@@ -23,10 +24,12 @@ if (navButton) {
 }
 
 if (navItem) {
-  navItem.forEach(function (link) {
-    link.addEventListener('click', function () {
+  navItem.forEach(function (item) {
+    item.addEventListener('click', function () {
       if (document.body.classList.contains('no-scroll')) {
         document.body.classList.remove('no-scroll');
+        navigation.classList.remove('main-nav--opened');
+        navigation.classList.add('main-nav--closed');
       }
     });
   });

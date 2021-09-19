@@ -12,7 +12,7 @@
     }
 
     @media (max-width: 767px) {
-        width: 288px;
+        width: 100%;
     }
 }
 
@@ -38,6 +38,11 @@
 .form form {
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 767px) {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
 }
 
 .form input {
@@ -75,4 +80,14 @@
     border: none;
     border-radius: 6px;
     cursor: pointer;
+
+    &:hover {
+        padding: 14px 14px;
+        border: 1px solid $basic-black;
+    }
+
+    &:active {
+        padding: 14px 14px;
+        border: 1px solid blue;
+    }
 }

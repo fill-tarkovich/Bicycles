@@ -17,6 +17,10 @@
     cursor: pointer;
     border: none;
   }
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .main-nav--closed .main-nav__button {
@@ -79,7 +83,7 @@
   }
 }
 
-.main-nav li {
+.main-nav__item {
   padding: 21px 25px 9px 20px;
   font-weight: 300;
   margin-right: 89px;
@@ -123,7 +127,7 @@
   }
 }
 
-.main-nav--closed li {
+.main-nav--closed .main-nav__item {
   @media (max-width: 1023px) {
     display: none;
   }
@@ -160,9 +164,10 @@
 .main-nav--nojs .main-nav__wrapper {
   @media (max-width: 1023px) {
     display: block;
-    position: static;
+    position: fixed;
     top: -50px;
-    width: 100%;
+    width: 100vh;
+    min-height: 100%;
     z-index: 10;
     background-color: $white;
   }
@@ -174,7 +179,7 @@
   }
 }
 
-.main-nav--nojs li {
+.main-nav--nojs .main-nav__item {
   @media (max-width: 1023px) {
     display: block;
     width: 100%;
