@@ -6,10 +6,8 @@
     max-width: 1130px;
     margin: 0 auto;
     padding-bottom: 127px;
-
-    @media (min-width: 1023px) and (max-width: 1220px) {
-        width: calc(100% - 80px);
-    }
+    padding-left: 60px;
+    padding-right: 60px;
 
     @media (max-width: 1023px) {
         max-width: 590px;
@@ -51,6 +49,10 @@
     padding: 0;
     list-style: none;
 
+    @media (min-width: 1023px) and (max-width: 1245px) {
+        flex-wrap: nowrap;
+    }
+
     @media (max-width: 767px) {
         justify-content: center;
     }
@@ -58,6 +60,8 @@
 
 .bicycles__item {
     position: relative;
+    display: flex;
+    flex-direction: column;
 
     @media (max-width: 1023px) {
         width: 270px;
@@ -71,6 +75,7 @@
 }
 
 .bicycles__item img {
+
     @media (max-width: 1023px) {
         width: 270px;
         height: 300px;
@@ -79,8 +84,10 @@
     }
 
     @media (min-width: 1023px) and (max-width: 1220px) {
-        width: 300px;
-      }
+        width: 100%;
+        height: 100%;
+        object-fit: scale-down;
+    }
 }
 
 .bicycles p {
@@ -119,10 +126,6 @@
         box-sizing: border-box;
         z-index: -1;
 
-        @media (min-width: 1024px) and (max-width: 1220px) {
-            left: -38px
-        }
-
         @media (max-width: 1023px) {
             left: -37px;
             top: 201px;
@@ -139,13 +142,14 @@
 
 .bicycles__item--mountain {
     padding-top: 40px;
+    margin: 0 50px;
 
     @media (max-width: 1023px) {
         padding-top: 0;
+        margin: 0;
     }
 
-    &::before,
-    &::after {
+    &::before {
         position: absolute;
         content: "";
         left: -19px;
@@ -161,10 +165,17 @@
     }
 
     &::after {
-        transform: translate(337px, 560px);
+        position: absolute;
+        content: "";
+        right: -19px;
+        bottom: 50px;
+        width: 47px;
+        height: 47px;
+        border: 8px solid $aqua;
+        box-sizing: border-box;
 
-        @media (min-width: 1024px) and (max-width: 1220px) {
-            transform: translate(290px, 560px);
+        @media (max-width: 1023px) {
+            display: none;
         }
     }
 }
@@ -196,10 +207,6 @@
         border: 17px solid $aqua;
         border-radius: 50%;
         box-sizing: border-box;
-
-        @media (min-width: 1024px) and (max-width: 1220px) {
-            right: -30px
-        }
 
         @media (max-width: 1023px) {
             right: -25px;

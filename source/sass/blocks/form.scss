@@ -7,12 +7,8 @@
 
     @media (max-width: 1023px) {
         position: static;
-        width: 321px;
-        margin: 70px auto;
-    }
-
-    @media (max-width: 767px) {
         width: 100%;
+        margin: 70px auto;
     }
 }
 
@@ -39,9 +35,14 @@
     display: flex;
     flex-direction: column;
 
+    @media (max-width: 1023px) {
+        padding-left: 224px;
+        padding-right: 223px;
+    }
+
     @media (max-width: 767px) {
-        margin-left: 16px;
-        margin-right: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
 }
 
