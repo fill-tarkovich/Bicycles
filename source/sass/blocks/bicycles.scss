@@ -162,6 +162,10 @@
 
     &::after {
         transform: translate(337px, 560px);
+
+        @media (min-width: 1024px) and (max-width: 1220px) {
+            transform: translate(290px, 560px);
+        }
     }
 }
 
